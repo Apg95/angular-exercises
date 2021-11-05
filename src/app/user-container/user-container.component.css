@@ -1,0 +1,13 @@
+.container {
+    width: 48vw;
+    height: 93vh;
+    background-color: rgba(108, 181, 204, 0.801);
+    border: rgb(0, 132, 255) solid 1px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.component {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,3 @@
+<p *ngFor='let item of box; index as i'>
+    {{i+1}} <img src="{{item.profilePhotoUrl}}" alt="gatti"><strong> {{item.name}}{{item.surname}}</strong> {{item.age}} {{item.address.city}} <button>Delete</button>
+</p>

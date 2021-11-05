@@ -1,0 +1,14 @@
+<p> id: {{obj.id}} </p>
+<p>Name: {{obj.name}} </p>
+<p>Surname: {{obj.surname}}</p>
+<p>Age: {{obj.age}}</p>
+<p>Date of birth {{obj.dateOfBirth | date: 'dd-MMM-yyyy'}}</p>
+<p><strong>Address:</strong></p>
+<p>City: {{obj.address.city}}</p>
+<p>Street: {{obj.address.street}}</p>
+<p>PostalCode:  {{obj.address.postalCode}}</p>
+<p>Role:  {{obj.role}}</p>
+<p>username:  {{obj.username}}</p>
+<img src="{{obj.profilePhotoUrl}}" alt="gatto">
+<p>Gender: {{obj.gender}}</p>
+<p *ngFor="let element of obj.companies"><strong>Company: {{element.name}}</strong> <br> Description: {{element.description}}</p>

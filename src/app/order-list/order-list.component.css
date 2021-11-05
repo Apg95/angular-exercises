@@ -1,0 +1,15 @@
+.container {
+    background-color: rgb(205, 178, 230);
+    border: 1px solid rgb(113, 34, 216);
+    height: 70vh;
+    width: 45vw;
+}
+
+.component {
+    width: 45vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
