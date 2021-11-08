@@ -2,4 +2,10 @@
     <!-- {{i+1}} <img src="{{element.profilePhotoUrl}}" alt="gatti"><strong> {{element.name}}{{element.surname}}</strong> {{element.age}} {{element.address.city}} -->
     <!-- <app-user-singles [box]="Utenti"  (removeE)="removeUser(element)"></app-user-singles> -->
 </ol>
-<app-user-singles [box]="Utenti"  (removeE)="removeUser($event)"></app-user-singles>
+<div *ngIf='Utenti.length > 0; else noUsers'>
+    <app-user-singles [box]="Utenti"  (removeE)="removeUser($event)"></app-user-singles>
+</div>
+
+<ng-template #noUsers>
+    <p>Non sono presenti utenti</p>
+</ng-template>
