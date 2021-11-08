@@ -63,6 +63,7 @@ export class UserListsComponent implements OnInit {
     this.Utenti = this.Utenti.filter(item => item !== obj)
     }
 
+
   constructor() { }
 
   ngOnInit(): void {

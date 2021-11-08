@@ -1,5 +1,8 @@
-<p *ngFor='let item of box; index as i'>
-    {{i+1}} <img src="{{item.profilePhotoUrl}}" alt="gatti"><strong> {{item.name}}{{item.surname}}</strong> 
-    {{item.age}} {{item.address.city}} 
-    <button (click)="removeE.emit(item)">Delete</button>
+<p class="border" [ngClass]="{'border-info' : item.role === 'Staff',
+ 'border-warning' : item.role === 'Manager',
+ 'border-dark' : item.role === 'Admin'}" 
+*ngFor='let item of box; index as i'>
+{{i+1}} <img src="{{item.profilePhotoUrl}}" alt="gatti"><strong> {{item.name}}{{item.surname}}</strong> 
+{{item.age}} {{item.address.city}} 
+<button (click)="removeE.emit(item)">Delete</button>
 </p>
