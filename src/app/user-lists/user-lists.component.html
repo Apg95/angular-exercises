@@ -1,4 +1,5 @@
 <ol *ngFor='let element of Utenti; index as i;'>
     <!-- {{i+1}} <img src="{{element.profilePhotoUrl}}" alt="gatti"><strong> {{element.name}}{{element.surname}}</strong> {{element.age}} {{element.address.city}} -->
+    <!-- <app-user-singles [box]="Utenti"  (removeE)="removeUser(element)"></app-user-singles> -->
 </ol>
-<app-user-singles [box]="Utenti"></app-user-singles>
+<app-user-singles [box]="Utenti"  (removeE)="removeUser($event)"></app-user-singles>
