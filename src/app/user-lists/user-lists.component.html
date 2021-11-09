@@ -1,4 +1,7 @@
-<ol *ngFor='let element of Utenti; index as i;'>
-    <!-- {{i+1}} <img src="{{element.profilePhotoUrl}}" alt="gatti"><strong> {{element.name}}{{element.surname}}</strong> {{element.age}} {{element.address.city}} -->
-</ol>
-<app-user-singles [box]="Utenti"></app-user-singles>
+<div *ngIf='Utenti.length > 0; else noUsers'>
+    <app-user-singles [box]="Utenti"  (removeE)="removeUser($event)"></app-user-singles>
+</div>
+
+<ng-template #noUsers>
+    <p>Non sono presenti utenti</p>
+</ng-template>

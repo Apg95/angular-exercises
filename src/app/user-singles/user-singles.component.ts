@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { User } from '../user-lists/interfaccia-utenti';
 
 @Component({
   selector: 'app-user-singles',
@@ -6,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./user-singles.component.css']
 })
 export class UserSinglesComponent implements OnInit {
-@Input() box : any = '';
+@Input() box : any;
+@Output() removeE = new EventEmitter<User>();
 
   constructor() { }
 
